@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable padding-line-between-statements */
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
@@ -59,7 +60,7 @@ const Exam = () => {
 
   // Submit Answers to Backend
   const submitAnswers = async () => {
-    console.log("Submitting Answers:", answers);
+    //console.log("Submitting Answers:", answers);
     // Simulating API Call
     await fetch("/api/submitExam", {
       method: "POST",
@@ -126,7 +127,7 @@ const Exam = () => {
       {/* Questions */}
       {questions.map((q, index) => (
         <div key={index} className="my-4 text-left w-full pt-1">
-          <p className="font-semibold">
+          <p className="font-semibold ">
             {index + 1}. {q.question}
           </p>
           {q.options.map((option, optionIndex) => (
@@ -135,7 +136,7 @@ const Exam = () => {
               className={`block ${
                 answers[index] === optionLabels[optionIndex]
                   ? "text-green-500 font-bold"
-                  : "text-black"
+                  : "text-black dark:text-white"
               }`}
             >
               <input

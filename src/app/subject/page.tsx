@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
 "use client";
 
@@ -14,17 +15,17 @@ const SubjectSelection = () => {
   const router = useRouter();
 
   const handleStartExam = (subjectId: string) => {
-    router.push(`/exam?subject=${subjectId}`);
+    router.push(`/confirmExam?subject=${subjectId}`);
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg flex flex-col items-start relative">
+    <div className=" w-full bg-white shadow-lg rounded-lg flex flex-col items-start relative">
       <h1 className="text-2xl font-bold text-center mb-4">Select a Subject</h1>
-      <ul className="space-y-4">
+      <ul className="space-y-4  w-full">
         {subjects.map((subject) => (
           <li
             key={subject.id}
-            className="flex justify-between items-center bg-gray-100 p-3 rounded-lg"
+            className=" w-full flex justify-between items-center bg-gray-100 p-3 rounded-lg"
           >
             <span className="text-lg font-semibold">{subject.name}</span>
             <button
