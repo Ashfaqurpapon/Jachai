@@ -19,18 +19,18 @@ const SubjectSelection = () => {
   };
 
   return (
-    <div className=" w-full bg-white shadow-lg rounded-lg flex flex-col items-start relative">
+    <div className=" w-full shadow-lg rounded-lg flex flex-col items-start relative">
       <h1 className="text-2xl font-bold text-center mb-4">Select a Subject</h1>
       <ul className="space-y-4  w-full">
         {subjects.map((subject) => (
           <li
             key={subject.id}
-            className=" w-full flex justify-between items-center bg-gray-100 p-3 rounded-lg"
+            className="  w-full flex justify-between items-center p-3 rounded-lg border-1 border-purple-500"
           >
             <span className="text-lg font-semibold">{subject.name}</span>
             <button
               onClick={() => handleStartExam(subject.id)}
-              className="bg-blue-500 text-white px-4 py-2 rounded"
+              className="bg-blue-500 px-4 py-2 rounded"
             >
               Start
             </button>

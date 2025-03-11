@@ -29,9 +29,9 @@ const ConfirmExam = () => {
       initial={{ scale: 0.1, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className=" w-full pt-7 bg-white shadow-lg rounded-lg"
+      className=" w-full pt-7 shadow-lg rounded-lg border-2 border-purple-500"
     >
-      <div className=" w-full  bg-white shadow-lg rounded-lg flex flex-col items-start relative transition-transform transform scale-95 animate-zoom-in">
+      <div className=" w-full shadow-lg rounded-lg flex flex-col items-start relative transition-transform transform scale-95 animate-zoom-in">
         <h1 className="text-5xl font-bold text-center mb-4">Confirm Exam</h1>
 
         <p className="text-2xl pt-6 ">📘 Subject: {subject}</p>
@@ -41,7 +41,7 @@ const ConfirmExam = () => {
 
         <button
           onClick={startExam}
-          className="bg-blue-500  text-white px-4 py-4 mt-4 rounded w-1/3"
+          className="bg-blue-500  px-4 py-4 mt-4 rounded w-1/3"
         >
           Start Exam
         </button>
